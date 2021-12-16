@@ -1,0 +1,403 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+/*Theme 1*/
+/*Theme 2*/
+/*Theme 3*/
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*estilos universales*/
+.margin {
+  margin: 1.5rem 0 !important;
+}
+
+.padding {
+  padding: 1.5rem !important;
+}
+
+.border-radius {
+  border-radius: .6rem;
+}
+
+#del, #reset, #igual {
+  font-size: 1rem;
+}
+
+.letras {
+  font-size: 1.5rem;
+}
+
+button, input {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 700;
+}
+
+/*---------------------------------------*/
+body {
+  font-size: 32px;
+  font-family: 'Spartan', sans-serif;
+  background: #3a4764;
+  min-width: 23.4rem;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#calculadora {
+  max-width: 25rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+#cabecera {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 1rem;
+}
+
+#cabecera #div-switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 7.8rem;
+  font-size: .7rem;
+  text-align: center;
+}
+
+#cabecera #div-switch #number-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#cabecera #div-switch #div-circulo {
+  width: 3.75rem;
+  height: 1.25rem;
+  border-radius: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 .3rem;
+  cursor: pointer;
+}
+
+#cabecera #div-switch #div-circulo .circulos {
+  height: 75%;
+  width: 33%;
+  border-radius: 50%;
+}
+
+#display {
+  width: 100%;
+  height: 6.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#display input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: none;
+  text-align: right;
+  font-weight: 700;
+}
+
+#display input::-webkit-outer-spin-button, #display input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#teclado {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (minmax(3.1rem, 1fr))[5];
+      grid-template-rows: repeat(5, minmax(3.1rem, 1fr));
+  gap: 1.5rem;
+}
+
+#teclado #reset {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+}
+
+#teclado #igual {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-column: 3/5;
+}
+
+#teclado button {
+  border-radius: .6rem;
+  border: none;
+  cursor: pointer;
+}
+
+/*estilos javascript*/
+.colores {
+  color: white !important;
+}
+
+/*TEMA 1*/
+.calculadora .cabecera {
+  color: white;
+}
+
+.calculadora .cabecera #div-circulo {
+  background: #232c43;
+}
+
+.calculadora .cabecera #div-circulo .circulos {
+  background: #232c43;
+}
+
+.calculadora .cabecera #div-circulo #circulo1 {
+  background: #d03f2f !important;
+}
+
+.calculadora .display {
+  background: #182034;
+}
+
+.calculadora .display input {
+  color: white;
+  caret-color: #182034;
+}
+
+.calculadora .display input::-webkit-input-placeholder {
+  color: white;
+}
+
+.calculadora .display input:-ms-input-placeholder {
+  color: white;
+}
+
+.calculadora .display input::-ms-input-placeholder {
+  color: white;
+}
+
+.calculadora .display input::placeholder {
+  color: white;
+}
+
+.calculadora .teclado {
+  background: #232c43;
+}
+
+.calculadora .teclado button {
+  color: #444b5a;
+  background: #eae3dc;
+  border-bottom: solid 4px #b4a597 !important;
+}
+
+.calculadora .teclado button:active {
+  background: #b4a597;
+}
+
+.calculadora .teclado #del, .calculadora .teclado #reset {
+  background: #637097;
+  border-bottom: solid 4px #404e72 !important;
+  color: white;
+}
+
+.calculadora .teclado #del:active, .calculadora .teclado #reset:active {
+  background: #404e72;
+}
+
+.calculadora .teclado #igual {
+  background: #d03f2f;
+  border-bottom: solid 4px #93261a !important;
+  color: white;
+}
+
+.calculadora .teclado #igual:active {
+  background: #93261a;
+}
+
+/*------------------------------------------------------*/
+/*TEMA 2*/
+.calculadora2 .cabecera {
+  color: #35352c;
+}
+
+.calculadora2 .cabecera #div-circulo {
+  background: #d1cccc;
+}
+
+.calculadora2 .cabecera #div-circulo .circulos {
+  background: #d1cccc;
+}
+
+.calculadora2 .cabecera #div-circulo #circulo2 {
+  background: #ca5502 !important;
+}
+
+.calculadora2 .display {
+  background: #ededed;
+}
+
+.calculadora2 .display input {
+  color: #35352c;
+  caret-color: #ededed;
+}
+
+.calculadora2 .display input::-webkit-input-placeholder {
+  color: #35352c;
+}
+
+.calculadora2 .display input:-ms-input-placeholder {
+  color: #35352c;
+}
+
+.calculadora2 .display input::-ms-input-placeholder {
+  color: #35352c;
+}
+
+.calculadora2 .display input::placeholder {
+  color: #35352c;
+}
+
+.calculadora2 .teclado {
+  background: #d1cccc;
+}
+
+.calculadora2 .teclado button {
+  color: #35352c;
+  background: #e5e4e1;
+  border-bottom: 4px solid #a69d91 !important;
+}
+
+.calculadora2 .teclado button:active {
+  background: #a69d91;
+}
+
+.calculadora2 .teclado #del, .calculadora2 .teclado #reset {
+  background: #377f86;
+  border-bottom: solid 4px #1b5f65 !important;
+  color: white;
+}
+
+.calculadora2 .teclado #del:active, .calculadora2 .teclado #reset:active {
+  background: #1b5f65;
+}
+
+.calculadora2 .teclado #igual {
+  background: #ca5502;
+  border-bottom: solid 4px #893901 !important;
+  color: white;
+}
+
+.calculadora2 .teclado #igual:active {
+  background: #93261a;
+}
+
+/*------------------------------------------------------*/
+/*TEMA 3*/
+.calculadora3 .cabecera {
+  color: #ffe53d;
+}
+
+.calculadora3 .cabecera #div-circulo {
+  background: #1d0934;
+}
+
+.calculadora3 .cabecera #div-circulo .circulos {
+  background: #1d0934;
+}
+
+.calculadora3 .cabecera #div-circulo #circulo3 {
+  background: #00e0d1 !important;
+}
+
+.calculadora3 .display {
+  background: #1d0934;
+}
+
+.calculadora3 .display input {
+  color: #ffe53d;
+  caret-color: #1d0934;
+}
+
+.calculadora3 .display input::-webkit-input-placeholder {
+  color: #ffe53d;
+}
+
+.calculadora3 .display input:-ms-input-placeholder {
+  color: #ffe53d;
+}
+
+.calculadora3 .display input::-ms-input-placeholder {
+  color: #ffe53d;
+}
+
+.calculadora3 .display input::placeholder {
+  color: #ffe53d;
+}
+
+.calculadora3 .teclado {
+  background: #1d0934;
+}
+
+.calculadora3 .teclado button {
+  color: #ffe53d;
+  background: #341c4f;
+  border-bottom: 4px solid #871c9c !important;
+}
+
+.calculadora3 .teclado button:active {
+  background: #871c9c;
+}
+
+.calculadora3 .teclado #del, .calculadora3 .teclado #reset {
+  background: #58077d;
+  border-bottom: solid 4px #bc15f4 !important;
+  color: white;
+}
+
+.calculadora3 .teclado #del:active, .calculadora3 .teclado #reset:active {
+  background: #bc15f4;
+}
+
+.calculadora3 .teclado #igual {
+  background: #00e0d1;
+  border-bottom: solid 4px #6cf9f2 !important;
+  color: #1b2428;
+}
+
+.calculadora3 .teclado #igual:active {
+  background: #6cf9f2;
+}
+
+/*------------------------------------------------------*/
+/*# sourceMappingURL=estilo.css.map */

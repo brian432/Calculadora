@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="estilo/estilo.css">
+  <title>Calculator app</title>
+</head>
+<body id="body">
+  <section id="calculadora" class="calculadora">
+    <div id="cabecera" class="cabecera margin">
+      <h1 class="color">calc</h1>
+      <div id="div-switch">
+        <p class="color">THEME</p>
+        <div id="switch">
+          <div id="number-container">
+            <span class="color">1</span>
+            <span class="color">2</span>
+            <span class="color">3</span>
+          </div>
+          <div id="div-circulo">
+            <div id="circulo1" class="circulos"></div>
+            <div id="circulo2" class="circulos"></div>
+            <div id="circulo3" class="circulos"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="display" class="display margin padding border-radius">
+      <input type="number" name="number" id="number" spellcheck="false" placeholder="0">
+    </div>  
+    <div id="teclado" class="teclado margin padding border-radius">
+      <button class="numeros" value="7">7</button>
+      <button class="numeros" value="8">8</button>
+      <button class="numeros" value="9">9</button>
+      <button id="del" class="del-reset">DEL</button>
+      <button class="numeros" value="4" >4</button>
+      <button class="numeros" value="5" >5</button>
+      <button class="numeros" value="6" >6</button>
+      <button class="letras signos" value="+">+</button>
+      <button class="numeros" value="1">1</button>
+      <button class="numeros" value="2">2</button>
+      <button class="numeros" value="3">3</button>
+      <button class="letras signos" value="-">-</button>
+      <button class="letras signos" value=".">.</button>
+      <button class="numeros" value="0">0</button>
+      <button class="letras signos" value="/">/</button>
+      <button class="letras signos" value="x">x</button>
+      <button id="reset" class="del-reset">RESET</button>
+      <button class="signos" value="=" id="igual">=</button>
+    </div>
+  </section>
+  <script src="app.js"></script>
+  <script src="theme.js"></script>
+</body>
+</html>

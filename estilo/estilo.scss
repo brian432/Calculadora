@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+/*Theme 1*/
+
+//Backgrounds
+
+$Very-dark-desaturated-blue1: hsl(222, 26%, 31%);
+$Very-dark-desaturated-blue2: hsl(223, 31%, 20%);
+$Very-dark-desaturated-blue3: hsl(224, 36%, 15%);
+
+//Keys
+
+$Desaturated-dark-blue1: hsl(225, 21%, 49%);
+$Desaturated-dark-blue2: hsl(224, 28%, 35%);
+
+$Red: hsl(6, 63%, 50%);
+$Dark-red: hsl(6, 70%, 34%);
+
+$Light-grayish-orange: hsl(30, 25%, 89%);
+$Grayish-orange: hsl(28, 16%, 65%);
+
+//Text
+
+$Very-dark-grayish-blue: hsl(221, 14%, 31%);
+$White: hsl(0, 0, 100%);
+
+/*Theme 2*/
+
+//Backgrounds
+$Light-gray: hsl(0, 0%, 90%);
+$Grayish-red: hsl(0, 5%, 81%);
+$Very-light-gray: hsl(0, 0%, 93%);
+
+//Keys
+$Dark-moderate-cyan: hsl(185, 42%, 37%);
+$Very-dark-cyan: hsl(185, 58%, 25%);
+
+$Orange: hsl(25, 98%, 40%);
+$Dark-orange: hsl(25, 99%, 27%);
+
+$Light-grayish-yellow: hsl(45, 7%, 89%);
+$Dark-grayish-orange: hsl(35, 11%, 61%);
+
+//Text
+$Very-dark-yellow: hsl(60, 10%, 19%);
+$White2: hsl(0, 0, 100%);
+
+
+/*Theme 3*/
+
+//Backgrounds
+$Very-dark-violet1: hsl(268, 75%, 9%);
+$Very-dark-violet2: hsl(268, 71%, 12%);
+
+//Keys
+$Dark-violet: hsl(281, 89%, 26%);
+$Vivid-magenta: hsl(285, 91%, 52%);
+
+$Pure-cyan: hsl(176, 100%, 44%);
+$Soft-cyan: hsl(177, 92%, 70%);
+
+$Very-dark-violet: hsl(268, 47%, 21%);
+$Dark-magenta: hsl(290, 70%, 36%);
+
+//Text
+$Light-yellow: hsl(52, 100%, 62%);
+$Very-dark-blue: hsl(198, 20%, 13%);
+$White3: hsl(0, 0, 100%);
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*estilos universales*/
+.margin{
+    margin: 1.5rem 0!important;
+}
+.padding{
+    padding: 1.5rem!important;
+}
+.border-radius{
+    border-radius: .6rem;
+}
+
+#del, #reset, #igual{
+    font-size: 1rem;
+}
+.letras{
+    font-size: 1.5rem;
+}
+button, input{
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: 700;
+}
+/*---------------------------------------*/
+body{
+    font-size: 32px;
+    font-family: 'Spartan', sans-serif;
+    background: $Very-dark-desaturated-blue1;
+    min-width: 320px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+#calculadora{
+    max-width: 25rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+#cabecera{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 1rem;
+    #div-switch{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 7.8rem;
+        font-size: .7rem;
+        text-align: center;
+        #number-container{
+            display: flex;
+            justify-content: space-around;
+        }
+        #div-circulo{
+            width: 3.75rem;
+            height: 1.25rem;
+            border-radius: 1.5rem;
+            display: flex;
+            align-items: center;
+            padding: 0 .3rem;
+            cursor:pointer;
+            .circulos{
+                height: 75%;
+                width: 33%;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+#display{
+    width: 100%;
+    height: 6.625rem;
+    display: flex;
+    input{
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        background: none;
+        text-align: right;
+        font-weight: 700;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+}
+
+
+#teclado{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5,minmax(3.1rem,1fr));
+    gap: 1.5rem;
+    #reset{
+        grid-column:1/3 ;
+    }
+    #igual{
+        grid-column: 3/5;
+    }
+    button{
+        border-radius: .6rem;
+        border: none;
+        cursor: pointer;
+    }   
+}
+
+
+/*estilos javascript*/
+
+.colores{
+    color: $White!important;
+}
+
+
+/*TEMA 1*/
+
+.calculadora{
+    .cabecera{
+        color: $White;
+        #div-circulo{
+            background:$Very-dark-desaturated-blue2;
+            .circulos{
+                background: $Very-dark-desaturated-blue2;
+            }
+            #circulo1{
+                background: $Red!important;
+            }
+        }     
+    }
+    
+    .display{
+        background: $Very-dark-desaturated-blue3;
+        input{
+            color: white;
+            caret-color: $Very-dark-desaturated-blue3;
+        }
+        input::placeholder{
+            color: $White;
+        }
+    }
+    
+    .teclado{
+        background: $Very-dark-desaturated-blue2;
+        button{
+            color: $Very-dark-grayish-blue;
+            background: $Light-grayish-orange;
+            border-bottom: solid 4px $Grayish-orange!important;
+            &:active{
+                background: $Grayish-orange;
+            }
+        }
+        #del, #reset{
+            background: $Desaturated-dark-blue1;
+            border-bottom: solid 4px $Desaturated-dark-blue2!important;
+            color: $White;
+            &:active{
+                background: $Desaturated-dark-blue2;
+            }
+        }
+        #igual{
+            background: $Red;
+            border-bottom: solid 4px $Dark-red!important;
+            color: $White;
+            &:active{
+                background: $Dark-red;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------*/
+
+/*TEMA 2*/
+.calculadora2{
+    .cabecera{
+        color: $Very-dark-yellow;
+        #div-circulo{
+            background:$Grayish-red;
+            .circulos{
+                background: $Grayish-red;
+            }
+            #circulo2{
+                background: $Orange!important;
+            }
+        }     
+    }
+    
+    .display{
+        background: $Very-light-gray;
+        input{
+            color: $Very-dark-yellow;
+            caret-color: $Very-light-gray;
+            &::placeholder{
+                color:$Very-dark-yellow;
+            }
+        }
+    }
+    
+    .teclado{
+        background: $Grayish-red;
+        button{
+            color: $Very-dark-yellow;
+            background: $Light-grayish-yellow;
+            border-bottom: 4px solid $Dark-grayish-orange!important;
+            &:active{
+                background:$Dark-grayish-orange;
+            }
+        }
+        #del, #reset{
+            background: $Dark-moderate-cyan;
+            border-bottom: solid 4px $Very-dark-cyan!important;
+            color: $White;
+            &:active{
+                background: $Very-dark-cyan;
+            }
+        }
+        #igual{
+            background: $Orange;
+            border-bottom: solid 4px $Dark-orange!important;
+            color: $White;
+            &:active{
+                background: $Dark-red;
+            }
+        }
+    }
+}
+
+
+
+/*------------------------------------------------------*/
+
+/*TEMA 3*/
+.calculadora3{
+    .cabecera{
+        color: $Light-yellow;
+        #div-circulo{
+            background:$Very-dark-violet2;
+            .circulos{
+                background: $Very-dark-violet2;
+            }
+            #circulo3{
+                background: $Pure-cyan!important;
+            }
+        }     
+    }
+    
+    .display{
+        background: $Very-dark-violet2;
+        input{
+            color: $Light-yellow;
+            caret-color: $Very-dark-violet2;
+            &::placeholder{
+                color:$Light-yellow;
+            }
+        }
+    }
+    
+    .teclado{
+        background: $Very-dark-violet2;
+        button{
+            color: $Light-yellow;
+            background: $Very-dark-violet;
+            border-bottom: 4px solid $Dark-magenta!important;
+            &:active{
+                background:$Dark-magenta;
+            }
+        }
+        #del, #reset{
+            background: $Dark-violet;
+            border-bottom: solid 4px $Vivid-magenta!important;
+            color: $White;
+            &:active{
+                background: $Vivid-magenta;
+            }
+        }
+        #igual{
+            background:$Pure-cyan;
+            border-bottom: solid 4px $Soft-cyan!important;
+            color: $Very-dark-blue;
+            &:active{
+                background: $Soft-cyan;
+            }
+        }
+    }
+}
+
+
+/*------------------------------------------------------*/
