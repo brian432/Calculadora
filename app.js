@@ -34,8 +34,10 @@ numeros.forEach((elemento) => {
     elemento.addEventListener("click", () => {
         if (igualS && contadorIgual!==1) {
             igualS = false;
-            acumulado=0;
             contadorIgual=0;
+            if(!sumar && !restar && !multiplicar && !dividir){
+                acumulado=0;
+            }
         }else if(igualS){
             igualS = false;
             contadorIgual=0;
